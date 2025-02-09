@@ -31,6 +31,8 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
+
+/* -------------cookies end----------------- */
 /* Default Dark Mode (Main Styles) */
 body.dark-mode {
   background-color: #000000;
@@ -105,7 +107,8 @@ body.light-mode button {
 }
 
 body.light-mode button:hover {
-  background: #0056b3;
+  background: #000000;
+  color: white;
 }
 
 /* Theme Switch Styling */
@@ -251,7 +254,16 @@ input:checked + .switch::after {
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
   }
 
   .nav-links {
@@ -268,17 +280,22 @@ input:checked + .switch::after {
   }
 
   .nav-links.active {
-    display: none;
+    display: flex;
   }
 
   .submenu .dropdown {
+    display: none;
     position: relative;
+    background: #444;
+    width: 100%;
+    padding: 10px;
   }
 
-  .submenu:hover .dropdown {
+  .submenu.active .dropdown {
     display: block;
   }
 }
+
 
 .home-hero .hero{
   background-image: url('assets/images/hero.jpg');
