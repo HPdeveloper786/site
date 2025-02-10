@@ -25,7 +25,7 @@
 <navbar class="custom-navbar">
   <div class="container">
     <a href="index.html" class="logo">
-      <img src="assets/images/logo.png" alt="Digital Helm Logo" height="40">
+      <img src="assets/images/logo.svg" alt="Digital Helm Logo" height="40">
     </a>
     <div class="menu-toggle" id="menu-toggle">
       <span></span><span></span><span></span>
@@ -66,7 +66,7 @@
            
     <!-- =================== About SECTION =================== -->
 <section class="about" id="about">
-  <div class="about-container" data-aos="fade-up">
+  <div class="about-container" >
     <!-- First Section -->
     <div class="img">
       <div class="liner"></div>
@@ -89,7 +89,7 @@
 
 
   <!-- Second Section -->
-  <div class="about-container reverse" data-aos="fade-right">
+  <div class="about-container reverse">
     <div class="img-content">
       <h3>Our Team of Experts Is Here to Help</h3>
       <p>
@@ -130,15 +130,15 @@
               <h3>Bespoke Software Development</h3>
               <p>We create tailored software solutions that help businesses improve efficiency and automate processes. Whether it's a CRM, an operational management tool, or a specialised application, our software integrates with existing systems to enhance productivity and support long-term growth. (See More)</p>
           </div>
-          <div class="service-container"data-aos="fade-up">
-          <div class="service-box top" data-aos="fade-up">
+          <div class="service-container">
+          <div class="service-box top" >
               <img src="assets/images/icons/icon1.avif" alt="Cybersecurity Icon">
               <h3>Custom Website Builds</h3>
               <p>We develop websites that deliver seamless user experiences and align with business objectives. From e-commerce platforms to corporate sites, our web solutions focus on performance, usability, and optimisation to help businesses engage their audience effectively. (See More)</p>
           </div></div>
           
         
-          <div class="service-container"data-aos="fade-up">
+          <div class="service-container">
 
           <div class="service-box right" data-aos="fade-left">
               <img src="assets/images/icons/icon1.avif" alt="Cloud Services Icon">
@@ -147,7 +147,7 @@
           </div>
           </div>
       </div>
-      <p class="description" data-aos="fade-up">
+      <p class="description" >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugit sit beatae, voluptatibus placeat corrupti! Eaque aliquam reprehenderit consequuntur ipsum repellendus in.
           
         </p>
@@ -172,7 +172,7 @@
 
 
     <!-- =================== Contact us   SECTION  =================== -->
-    <section class="contact-section" data-aos="fade-up">
+    <section class="contact-section" >
       <h4>Contact Us</h4>
       <p>
         Have questions or need assistance? Get in touch with our team today and let’s discuss how we can help your business grow.
@@ -182,56 +182,75 @@
     
     
          <!-- =================== footer  =================== -->
-         <div class="four-box-container" >
-          <!-- Box 1: Company Info -->
-          <div class="box company-box" >
-              <img src="assets/images/logo.png" alt="Company Image">
-              <h3>About Our Company</h3>
-              <p>We provide top-notch IT solutions for businesses worldwide, ensuring growth and efficiency.</p>
-          </div>
-      
-          <!-- Box 2: Menu -->
-          <div class="box menu-box">
-              <h3>Services</h3>
-              <ul>
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">Mobile Apps</a></li>
-                  <li><a href="#">Cloud Solutions</a></li>
-                  <li><a href="#">AI & Automation</a></li>
-              </ul>
-          </div>
-      
-          <!-- Box 3: Menu -->
-          <div class="box menu-box">
-              <h3>Company</h3>
-              <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">News & Events</a></li>
-              </ul>
-          </div>
-      
-          <!-- Box 4: Menu -->
-          <div class="box menu-box">
-              <h3>Support</h3>
-              <ul>
-                  <li><a href="#">Help Center</a></li>
-                  <li><a href="#">FAQs</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-              </ul>
-          </div>
-      </div>
-      
+ 
 
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- About Our Company -->
+            <div class="footer-box">
+                <h3>About Our Company</h3>
+                <p>We provide top-notch IT solutions worldwide, ensuring growth and efficiency for businesses.</p>
+                <img src="assets/images/logo.png" alt="Company Logo" class="footer-logo">
+            </div>
+
+            <!-- Services -->
+            <div class="footer-box">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Cloud Solutions</a></li>
+                    <li><a href="#">AI & Automation</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-box">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News & Events</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-box">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright & Social Media -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Your Company. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+ <script src="assets/js/script.js"></script>
+<script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
     offset:300,
     duraction:2000,
   });
 </script>
-<script src="assets/js/script.js"></script> <!-- Fixed closing tag -->
 </body>
 </html>
