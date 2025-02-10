@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 📌 Dropdown Animation
   submenu.addEventListener("mouseenter", function () {
-    dropdown.style.display = "block";
+    dropdown.style.display = "contents";
     dropdown.style.opacity = "0";
     dropdown.style.animation = "fadeIn 0.5s ease-in-out forwards";
   });
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   submenu.addEventListener("mouseleave", function () {
     dropdown.style.animation = "fadeOut 0.3s ease-in-out";
     setTimeout(() => {
-      dropdown.style.display = "none";
+      dropdown.style.display = "contents";
     }, 300);
   });
 });
@@ -78,42 +78,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // -------------------------------cookies------------------------
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const banner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
-    
-    if (!getCookie("cookie_consent")) {
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+
+  if (!getCookie("cookie_consent")) {
       banner.style.display = "flex";
-    }
-    
-    acceptBtn.addEventListener("click", function() {
+  }
+
+  acceptBtn.addEventListener("click", function () {
       setCookie("cookie_consent", "accepted", 365);
       banner.style.display = "none";
-    });
-    
-    function setCookie(name, value, days) {
-      let expires = "";
-      if (days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + value + "; path=/" + expires;
-    }
-    
-    function getCookie(name) {
-      let nameEQ = name + "=";
-      let ca = document.cookie.split(';');
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
   });
 
+  function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+          let date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + expires + "; path=/";
+  }
 
+  function getCookie(name) {
+      let nameEQ = name + "=";
+      let cookiesArray = document.cookie.split(";");
+      for (let i = 0; i < cookiesArray.length; i++) {
+          let c = cookiesArray[i].trim();
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+      }
+      return null;
+  }
+});
 
 
 
