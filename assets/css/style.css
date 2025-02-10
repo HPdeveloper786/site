@@ -10,27 +10,62 @@ body {
 /* -------------------------------------cookies---------------- */
 .cookie-banner {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(45deg, #302f2f, #fffb08);
   color: white;
-  padding: 15px 20px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stacks content on smaller screens */
+  justify-content: center;
   align-items: center;
   width: 90%;
   max-width: 400px;
   z-index: 1000;
+  text-align: center;
 }
+
+.cookie-banner p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .cookie-banner button {
   background: #ffcc00;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 15px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  transition:  0.3s ease;
 }
+
+.cookie-banner button:hover {
+  background: #ffb700;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .cookie-banner {
+    width: 82%;
+        padding: 10px;
+        bottom: 5px;
+  }
+
+  .cookie-banner p {
+    font-size: 12px;
+  }
+
+  .cookie-banner button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
 
 /* -------------cookies end----------------- */
 /* Default Dark Mode (Main Styles) */
@@ -124,15 +159,17 @@ body.light-mode button:hover {
 
 .theme-switch .switch {
   width: 40px;
-  height: 20px;
-  background: #ccc;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  padding: 2px;
-  cursor: pointer;
-  position: relative;
-  transition: 0.3s;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    right: 40px;
+    top: 19px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
 }
 
 .theme-switch .switch::after {
@@ -157,13 +194,19 @@ input:checked + .switch::after {
 
 
 .custom-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #444;
-  padding: 10px 20px;
-  position: relative;
+  width: 100%;
+    position: relative;
+    background: rgb(82, 81, 81);
+    background-size: cover;
+    background-position: center center;
+    z-index: 99999;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
 }
+
 
 .logo img {
   height: 40px;
@@ -171,13 +214,14 @@ input:checked + .switch::after {
 
 .menu-toggle {
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 54px;
+    top: 34px;
+    /* padding: 1px 1px 16px 21px; */
+    z-index: 100;
 }
 
 .menu-toggle span {
@@ -282,6 +326,14 @@ input:checked + .switch::after {
   .nav-links.active {
     display: flex;
   }
+  .theme-switch .switch{
+    right: -15px;
+  }
+  .menu-toggle {
+    cursor: pointer;
+    right: 9px;
+      
+  } 
 
   .submenu .dropdown {
     display: none;
@@ -349,6 +401,7 @@ input:checked + .switch::after {
 @media (max-width: 768px) {
   .home-hero {
     height: 50vh;
+    top: 43px;
   }
 
   .hero-content h2 {
@@ -807,79 +860,103 @@ input:checked + .switch::after {
 
 
 /* ---------Footer----------- */
-/* ✅ Container Setup */
-.four-box-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  background: #111;
-  padding: 40px;
-  gap: 20px;
-}
-
-/* ✅ Individual Boxes */
-.box {
+/* Footer Styling */
+.footer {
   background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 23%;
-    font-size: 26px;
-    font-weight: 900;
-    color: white;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-
-/* 🔹 Company Box (First Box) */
-.company-box img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-.company-box p {
-  font-size: 14px;
-  opacity: 0.8;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* 🔹 Menu Boxes */
-.menu-box h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #ffcc00;
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: left;
 }
-.menu-box ul {
+
+.footer-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-box ul {
   list-style: none;
   padding: 0;
 }
-.menu-box li {
-  margin: 8px 0;
+
+.footer-box ul li {
+  margin: 10px 0;
 }
-.menu-box a {
-  color: white;
+
+.footer-box ul li a {
   text-decoration: none;
-  font-size: 14px;
+  color: #ccc;
   transition: 0.3s;
 }
-.menu-box a:hover {
-  color: #ffcc00;
+
+.footer-box ul li a:hover {
+  color: #007bff;
   text-decoration: underline;
 }
 
-/* 🎯 Hover Effect */
-.box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+/* Footer Logo */
+.footer-logo {
+  width: 100px;
+  margin-top: 10px;
 }
 
-/* ✅ Responsive Design */
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Responsive */
 @media (max-width: 992px) {
-  .four-box-container {
-      flex-direction: column;
-      align-items: center;
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .box {
-      width: 90%;
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }
