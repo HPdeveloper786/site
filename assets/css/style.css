@@ -8,17 +8,16 @@ body {
 }
 
 /* -------------------------------------cookies---------------- */
-.cookie-banner {
+#cookie-banner {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(45deg, #302f2f, #fffb08);
   color: white;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 15px 20px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column; /* Stacks content on smaller screens */
   justify-content: center;
   align-items: center;
   width: 90%;
@@ -27,46 +26,40 @@ body {
   text-align: center;
 }
 
-.cookie-banner p {
-  margin: 0 0 10px;
-  font-size: 14px;
-  line-height: 1.4;
+#cookie-banner p {
+  margin: 0;
+  flex: 1;
 }
 
-.cookie-banner button {
+#cookie-banner button {
   background: #ffcc00;
   border: none;
-  padding: 10px 15px;
+  padding: 8px 15px;
   cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px;
-  transition:  0.3s ease;
+  border-radius: 3px;
+  transition: 0.3s;
+  margin-left: 10px;
 }
 
-.cookie-banner button:hover {
-  background: #ffb700;
+#cookie-banner button:hover {
+  background: #e6b800;
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
-  .cookie-banner {
-    width: 82%;
-        padding: 10px;
-        bottom: 5px;
+  #cookie-banner {
+      bottom: 10px;
+      width: 95%;
+      max-width: 90%;
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
   }
 
-  .cookie-banner p {
-    font-size: 12px;
-  }
-
-  .cookie-banner button {
-    font-size: 12px;
-    padding: 8px 12px;
+  #cookie-banner button {
+      margin-top: 10px;
+      margin-left: 0;
   }
 }
-
-
 /* -------------cookies end----------------- */
 /* Default Dark Mode (Main Styles) */
 body.dark-mode {
@@ -109,7 +102,7 @@ body.dark-mode button:hover {
 
 /* Light Mode Styles */
 body.light-mode {
-  background-color: #ffffff;
+  background-color: rgb(143, 142, 142);;
   color: #000000;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -123,13 +116,32 @@ body.light-mode a:hover {
 }
 
 body.light-mode .custom-navbar {
-  background: #f8f8f8;
+  background: rgb(143, 142, 142);
 }
 
 body.light-mode .nav-links {
-  background: #ddd;
+  background: rgb(143, 142, 142);;
 }
-
+body.light-mode .img-color{
+     filter: invert(38%) sepia(78%) saturate(1211%)hue-rotate(190deg) brightness(107%) contrast(106%)
+}
+body.light-mode .menu-toggle{
+     filter: invert(38%) sepia(78%) saturate(1211%)hue-rotate(190deg) brightness(107%) contrast(106%)
+}
+body.light-mode .about{
+            background: rgb(143, 142, 142);
+            
+}
+body.light-mode .contact-section{
+            background: #373737;
+            
+}
+body.light-mode .img-content p{
+           color:#000000   
+} 
+body.light-mode .img-content h3{
+           color:#000000   
+} 
 body.light-mode .card {
   background: #ffffff;
   color: #000000;
@@ -207,6 +219,9 @@ input:checked + .switch::after {
     top: 0px;
 }
 
+.img-color{
+     filter: invert(100%) sepia(78%) saturate(1211%)hue-rotate(190deg) brightness(107%) contrast(106%)
+}
 
 .logo img {
   height: 40px;
@@ -300,6 +315,8 @@ input:checked + .switch::after {
   .menu-toggle {
     display: block;
     cursor: pointer;
+    right: 9px;
+    top: 25px;
   }
 
   .menu-toggle span {
@@ -312,15 +329,15 @@ input:checked + .switch::after {
 
   .nav-links {
     width: 100%;
-    left: 0;
-    background: #333;
-    display: none;
-    flex-direction: column;
-    padding: 15px;
-    position: absolute;
-    top: 50px;
-    text-align: center;
-    z-index: 99;
+        left: 0;
+        background: #333;
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        position: absolute;
+        top: 70px;
+        text-align: center;
+        z-index: 99;
   }
 
   .nav-links.active {
@@ -554,11 +571,12 @@ input:checked + .switch::after {
 
 .img img {
   width: 80%;
-  max-width: 300px; /* Prevents the image from getting too large */
+  max-width: 300px;
   position: relative;
-  height: auto;
+  height: 240px;
   z-index: 1;
 }
+
 
 /* Liner Behind Image */
 .liner {
@@ -570,7 +588,7 @@ input:checked + .switch::after {
   z-index: 0;
 
   /* 🔹 Gradient Background */
-  background: linear-gradient(45deg, #302f2f, #fffb08);
+  background: linear-gradient(319deg, #18ea98, #000000);
 }
 
 /* 🔹 Responsive for Mobile */
@@ -582,10 +600,14 @@ input:checked + .switch::after {
     top: 20px;
     
     /* Softer Gradient for Mobile */
-    background: linear-gradient(45deg, #302f2f, #fffb08);
+    background: linear-gradient(319deg, #18ea98, #000000);
   }
-  
+
 }
+       
+  
+  
+
 
 
 /* Text Content */
@@ -640,6 +662,7 @@ input:checked + .switch::after {
     position: relative;
     left: 0;
     top: 0;
+     border-radius: 18px;
   }
 
   .liner {
@@ -687,7 +710,7 @@ input:checked + .switch::after {
 }
 
 .service-box {
-  background: linear-gradient(240deg, #000000, #fffb08);
+  background: linear-gradient(319deg, #18ea98, #000000);
   backdrop-filter: blur(184px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 25px;
@@ -698,11 +721,7 @@ input:checked + .switch::after {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   opacity: 0;
 }
-.service-box :hover{
-  background: #f8b400;
-  color: rgb(0, 0, 0);
-    
-}
+
 
 /* 🖼️ Icons */
 .service-box img {
@@ -793,7 +812,7 @@ input:checked + .switch::after {
 /* <!-- =================== Over Team  SECTION =================== --> */
 /* 🌟 Blue Background Section */
 .Team-section {
-  background: #000000; /* Blue background */
+  background: #373737; /* Blue background */
   color: white;
   text-align: center;
   padding: 50px 5%;
@@ -905,14 +924,16 @@ input:checked + .switch::after {
 }
 
 .footer-box ul li a:hover {
-  color: #007bff;
+  color: #d0ff00;
   text-decoration: underline;
 }
 
 /* Footer Logo */
 .footer-logo {
-  width: 100px;
+  width: 198px;
   margin-top: 10px;
+    filter: invert(100%) sepia(78%) saturate(1211%)hue-rotate(190deg) brightness(107%) contrast(106%)
+  ;
 }
 
 /* Footer Bottom */
@@ -940,7 +961,7 @@ input:checked + .switch::after {
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  color: #d9ff00;
 }
 
 /* Responsive */
