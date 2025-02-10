@@ -17,15 +17,17 @@
 </head>
 <body>
   <!-- Cookie Consent Popup -->
-<div id="cookie-banner" class="cookie-banner">
+<!-- ✅ Mobile-Responsive Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
   <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
   <button id="accept-cookies">Accept</button>
 </div>
+
     <!-- =================== CUSTOM NAVBAR =================== -->
 <navbar class="custom-navbar">
   <div class="container">
     <a href="index.html" class="logo">
-      <img src="assets/images/logo.png" alt="Digital Helm Logo" height="40">
+      <img class="img-color" src="assets/images/logo.svg" alt="Digital Helm Logo" height="40" >
     </a>
     <div class="menu-toggle" id="menu-toggle">
       <span></span><span></span><span></span>
@@ -66,14 +68,14 @@
            
     <!-- =================== About SECTION =================== -->
 <section class="about" id="about">
-  <div class="about-container" >
+  <div class="about-container" data-aos="fade-right">
     <!-- First Section -->
     <div class="img">
       <div class="liner"></div>
       <img src="assets/images/about 1.avif" alt="About Image">
     </div>
     <div class="img-content">
-      <h3>Welcome to Alignment Technologies</h3>
+      <h2> <B>Welcome to Alignment Technologies</B></h2>
       <p>
         Alignment Technologies is a leading IT service provider, helping businesses translate their needs and goals into aligned IT capabilities that support efficiency, growth, and innovation. We work across industries, providing strategic IT solutions that enhance performance and operational resilience.
       </p>
@@ -89,9 +91,9 @@
 
 
   <!-- Second Section -->
-  <div class="about-container reverse">
+  <div class="about-container reverse"data-aos="fade-right">
     <div class="img-content">
-      <h3>Our Team of Experts Is Here to Help</h3>
+      <h2><B>Our Team of Experts Is Here to Help</B></h2>
       <p>
         Technology is vital to business success, but only when it is properly managed, optimised, and aligned with operational goals. If you are serious about maintaining a competitive edge through the right IT solutions, our team can help. We support businesses by ensuring stable and secure IT infrastructure, developing tailored software applications, and creating websites that drive engagement and conversions.
       </p>
@@ -122,10 +124,10 @@
 
 
      <!-- =================== Core Services  SECTION =================== -->
-     <section id="animated-bg" class="header finisher-header core-services">
+     <section id="animated-bg" class="header finisher-header core-services" >
       <h2>Our Core Services Focus on <span>Three Primary Areas:</span></h2>
-      <div class="service-container"data-aos="fade-right">
-          <div class="service-box left" >
+      <div class="service-container" >
+          <div class="service-box left" data-aos="fade-right">
               <img src="assets/images/icons/icon1.avif" alt="Software Development Icon">
               <h3>Bespoke Software Development</h3>
               <p>We create tailored software solutions that help businesses improve efficiency and automate processes. Whether it's a CRM, an operational management tool, or a specialised application, our software integrates with existing systems to enhance productivity and support long-term growth. (See More)</p>
@@ -138,9 +140,9 @@
           </div></div>
           
         
-          <div class="service-container">
+          <div class="service-container"data-aos="fade-left">
 
-          <div class="service-box right" data-aos="fade-left">
+          <div class="service-box right" >
               <img src="assets/images/icons/icon1.avif" alt="Cloud Services Icon">
               <h3>Infrastructure and Network Support</h3>
               <p>A strong IT infrastructure is essential for security and efficiency. We provide network management, system monitoring, and cybersecurity solutions that keep businesses running smoothly while preventing downtime and protecting valuable data. (See More)</p>
@@ -192,7 +194,7 @@
             <div class="footer-box">
                 <h3>About Our Company</h3>
                 <p>We provide top-notch IT solutions worldwide, ensuring growth and efficiency for businesses.</p>
-                <img src="assets/images/logo.png" alt="Company Logo" class="footer-logo">
+                <img src="assets/images/logo.svg" alt="Company Logo" class="footer-logo">
             </div>
 
             <!-- Services -->
@@ -231,7 +233,7 @@
 
         <!-- Copyright & Social Media -->
         <div class="footer-bottom">
-            <p>&copy; 2025 Your Company. All rights reserved.</p>
+            <p>&copy; 2025 Alignment IT. All rights reserved.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -243,7 +245,7 @@
 </footer>
 
 <!-- FontAwesome Icons -->
- <script src="assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -252,5 +254,9 @@
     duraction:2000,
   });
 </script>
+
+<script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
